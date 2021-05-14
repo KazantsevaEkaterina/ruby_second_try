@@ -2,7 +2,6 @@ $('.image .image_display .image_diag').css({"display": "none"});
 $('.img-left-side').css({"display": "none"});
 $('.img-right-side').css({"display": "none"});
 
-$("dropdown-toggle").dropdown()
 // to check whether the target is the content-area itself or a child of the content-area.
 $(document).click(function (e) {
     if ($(e.target).is(".select_theme") || $(e.target).closest(".select_theme").length) {
@@ -13,4 +12,12 @@ $(document).click(function (e) {
         $('.select_theme').empty().html("<%= j render 'work/button_theme_select' -%>");
     }
 });
+
+$("#slide").change(function (){
+    var displayValue = document.getElementById("chosen_value");
+    //show the amount
+    console.log("IN updateSlider:  - slideAmount = " + this.value );
+    displayValue.innerHTML = this.value;
+});
+
 $('.select_theme').empty().html("<%= j render 'choose_theme_from_arr' -%>");

@@ -17,6 +17,19 @@ Image.create([
                {name: 'Говядина', file: 'pizza5.jpg', theme_id: 2},
                {name: 'Сыр', file: 'pizza6.jpg', theme_id: 3},
                {name: 'Карбонара', file: 'pizza7.jpg', theme_id: 2},
+               {name: 'Перец с сыром', file: 'pizza8.jpg', theme_id: 3},
+               {name: 'Пицца с курицой', file: 'pizza9.jpg', theme_id: 3},
+               {name: 'Карбонара с руколоолололо', file: 'pizza10.jpg', theme_id: 2},
+               {name: 'Пицца на томатной основе', file: 'pizza11.jpg', theme_id: 3},
+               {name: 'Сыр с томатом', file: 'pizza12.jpg', theme_id: 3},
+               {name: 'Солянка', file: 'pizza13.jpg', theme_id: 2},
+               {name: 'Кальцоне', file: 'pizza14.jpg', theme_id: 2},
+               {name: 'Тесто', file: 'pizza15.jpg', theme_id: 3},
+               {name: 'Томат', file: 'pizza16.jpg', theme_id: 3},
+               {name: 'Сыр с луком', file: 'pizza17.jpg', theme_id: 2},
+               {name: 'Вяленный томат', file: 'pizza18.jpg', theme_id: 3},
+               {name: 'Сыр с начинкой', file: 'pizza19.jpg', theme_id: 3},
+               {name: 'Студенческая', file: 'pizza20.jpg', theme_id: 2},
              ])
 
 Theme.delete_all

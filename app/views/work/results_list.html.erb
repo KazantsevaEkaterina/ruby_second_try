@@ -1,0 +1,44 @@
+<div class="pb-2" title="<%= t(".page_title") %>">
+  <% if @composite_results.blank? %>
+    <table style="table-layout: auto" title="No Values results...">
+      <div class="results">
+        <h2>
+          <%= t(".no_values") %>
+        </h2>
+        <h2>
+          <%= t(".select_theme") %>
+        </h2>
+      </div>
+    </table>
+  <% else %>
+    <table style="table-layout: auto;width: 100%">
+      <div class="results">
+        <h2>Results</h2>
+      </div>
+      <tr style="font-family: Helvetica,serif; font-size: 2em; margin-bottom: .5em">
+        <th class="name">Image Name</th>
+        <th>Image</th>
+        <th>Value</th>
+        <th>Date</th>
+      </tr>
+      <% @composite_results_paged.each do |composite_diag| %>
+        <tr class="one_row">
+          <td>
+            <%= composite_diag.name %>
+          </td>
+          <td>
+            <%= image_tag('/assets/pictures/' + composite_diag.file, {:width => "53", :height =>"47", title: "Tested image"} ) %>
+          </td>
+          <td>
+            <%= composite_diag.ave_value %>
+          </td>
+          <td>
+            <%= composite_diag.created_at.strftime('%d.%m.%y ') %>
+          </td>
+        </tr>
+      <% end %>
+      <%= paginate @composite_results_paged, class: "pt-3 pb-3"%>
+    </table>
+  <% end %>
+</div>
+<%= link_to t(".return_to_main"), work_path,  class: "btn btn-lg btn-primary", title: "Go to main page" %>
