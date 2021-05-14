@@ -1,27 +1,36 @@
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+      <h2>
+        <%= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:" %>
+      </h2>
       <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= f.label t('.name') %>
+    <%= f.text_field :name %>
   </div>
-
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= f.label t('.email') %>
+    <%= f.text_field :email %>
   </div>
-
+  <div class="field">
+    <%= f.label t('.password') %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label t('.password_confirmation') %>
+    <%= f.password_field :password_confirmation %>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <% #= f.submit 'Save' %>
+    <%= f.submit t(".create_account"), class: "btn btn-large btn-primary" %>
   </div>
-<% end %>
+<%end %>
