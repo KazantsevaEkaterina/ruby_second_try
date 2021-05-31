@@ -1,0 +1,6 @@
+.work_list {
+    list-style-type: none
+}
+ul.work_list li {
+    margin-top: 10px;
+}

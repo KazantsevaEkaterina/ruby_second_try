@@ -8,6 +8,7 @@ ru:
       logo_title: "Experteese на Ruby_on_Rails"
       home: "Главная"
       help: "Помощь"
+      about: "О сайте"
       sign_in: "Войти"
       sign_out: "Выйти"
       person: "Я"

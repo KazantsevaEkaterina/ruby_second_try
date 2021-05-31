@@ -3,23 +3,33 @@
   <div class="row">
     <div class="col-md-3">
       <div class="left_controls">
+        <ul class="work_list">
+          <li>
         <div class="select_theme">
           <%= render 'work/button_theme_select', locale: @current_locale %>
         </div>
+          </li>
+          <li>
         <div class="modal_list_results">
           <%= render 'work/button_list_results', locale: @current_locale %>
           <br/>
         </div>
+          </li>
+          <li>
         <span class="common_value">
             <%= t('.common_value') %>
           <h2 class="common" title="Common value"></h2>
           </span>
+          </li>
+          <li>
         <span class="total_values">
             <%= t('.total_values') %>
           <h2 class="total" title="Total values">
               <%= @values_qty.round %>
             </h2>
         </span>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="col-md-9">
@@ -27,12 +37,12 @@
         <div class="row image">
           <div class="col-md-12">
             <h2 class="up-theme" title="theme_name">
-              <%=@selected_theme %>
+              <%= @selected_theme %>
             </h2>
           </div>
           <div class="col-md-12">
             <h2 class="up" title="Image file name">
-              <%=@selected_image_name %>
+              <%= @selected_image_name %>
             </h2>
           </div>
           <div class="col-md-1">
@@ -44,7 +54,7 @@
           </div>
           <div class="col-md-10">
             <div class="img-center" title="Default image">
-              <%= image_tag("default.jpg", alt: "Default Image",title: "Default image",style: "width:50%") %>
+              <%= image_tag("default.jpg", alt: "Default Image", title: "Default image", style: "width:50%") %>
             </div>
             <div class="image_user_value" title="Expert value"></div>
           </div>
