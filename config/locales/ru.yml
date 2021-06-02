@@ -16,9 +16,7 @@ ru:
       settings: "Настройки"
 
     footer:
-      about: "О сайте"
-      contact: "Контакты"
-      dev_msg: "Сайт в разработке"
+      naming: "Сделано Екатериной"
 
   sessions:
     new:

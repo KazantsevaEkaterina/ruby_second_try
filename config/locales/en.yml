@@ -17,9 +17,7 @@ en:
     #      logged_msg: "Logged in as "
 
     footer:
-      about: "About"
-      contact: "Contacts"
-      dev_msg: "App is in Development"
+      naming: "By Kate"
 
   sessions:
     new:

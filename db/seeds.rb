@@ -18,7 +18,7 @@ Image.create([
                {name: 'Сыр', file: 'pizza6.jpg', theme_id: 3},
                {name: 'Карбонара', file: 'pizza7.jpg', theme_id: 2},
                {name: 'Перец с сыром', file: 'pizza8.jpg', theme_id: 3},
-               {name: 'Пицца с курицой', file: 'pizza9.jpg', theme_id: 3},
+               {name: 'Пицца с курицей', file: 'pizza9.jpg', theme_id: 3},
                {name: 'Карбонара с руколоолололо', file: 'pizza10.jpg', theme_id: 2},
                {name: 'Пицца на томатной основе', file: 'pizza11.jpg', theme_id: 3},
                {name: 'Сыр с томатом', file: 'pizza12.jpg', theme_id: 3},
